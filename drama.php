@@ -1,5 +1,9 @@
 <?php
-    $apiKey = "api_key=33b4bbc1ba6dc5bb288f0601ace54e33";
+    $cookie_name = "apiKey";
+    if (!isset($_COOKIE['apiKey'])) {
+        header("Location: index.php");
+    }
+    $apiKey = "api_key=$_COOKIE[$cookie_name]";
     $apiURL = "https://api.themoviedb.org/3/discover/movie?$apiKey&with_genres=18&language=fr-FR";
     $data = file_get_contents($apiURL);
     $result = json_decode($data, true);

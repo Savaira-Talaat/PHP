@@ -1,9 +1,3 @@
-<?php
-    session_start();
-    if (isset($_SESSION['username'])) {
-        header("Location: index.php");
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +38,7 @@
                 </div>
                 <div class="inputBox">
                     <label for="username" class="label"></label>
-                    <input type='text' id="username" class="inputField" placeholder="Username" required/>
+                    <input type='text' id="username" name="username" class="inputField" placeholder="Username" required/>
                     <i class="bx bx-user icon"></i>
                 </div>
                     <br>
