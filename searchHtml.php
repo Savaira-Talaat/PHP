@@ -37,6 +37,10 @@
                 <div class="row">
                     <?php include('search.php'); ?>
                 </div>
+                <div class="row">
+                    <?php include('searchtemp.php'); ?>
+                </div>                
+
             </div>
         </div>
     </main>
