@@ -26,7 +26,7 @@
           <a href="#" class="nav-item">Action</a>
           <a href="#" class="nav-item">Drama</a>
           <a href="#" class="nav-item"><img src="cart.png" alt="panier" width="30px" height="30px"/></a>
-          <a href="inscription.php"><img src="userIcon.png" alt="userIcon" width="30px" height="30px"></a>
+          <a href="connexion.php"><img src="userIcon.png" alt="userIcon" width="30px" height="30px"></a>
         </div>
       </nav>
     </header>
@@ -42,7 +42,7 @@
                     <i class='bx bx-key icon'></i>
                 </div>
                 <div class="inputBox">
-                    <input type ="submit" class="inputSubmit" value="Envoyer">
+                    <input type ="submit" class="inputSubmit" name="inputSubmit" value="Envoyer">
                 </div>       
                 <div class="logOut">
                     <span>
@@ -51,5 +51,7 @@
                 </div>
             </div>
         </div>
+    </form>
+?>
 </body>
 </html>

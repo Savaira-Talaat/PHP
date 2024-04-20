@@ -17,14 +17,14 @@
           <a href="index.php" class="nav-item">Accueil</a>
         </div>
         <div class="search">
-            <form action="form.php" method="POST">
+            <form action="searchHtml.php" method="POST">
                 <input type="text" name="search" placeholder="Tapez pour rechercher...">
                 <input type="submit" value="Rechercher">
             </form>
         </div>
         <div class="right-items">
-          <a href="action.php" class="nav-item">Action</a>
-          <a href="dramas.php" class="nav-item">Drama</a>
+          <a href="actionHtml.php" class="nav-item">Action</a>
+          <a href="dramaHtml.php" class="nav-item">Drama</a>
           <a href="#" class="nav-item"><img src="cart.png" alt="panier" width="30px" height="30px"/></a>
           <a href="connexion.php"><img src="userIcon.png" alt="userIcon" width="30px" height="30px"></a>
         </div>
@@ -54,14 +54,15 @@
                 </video>
                 <div class="card-body">
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.<br />
+                    Ready Player One<br />
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                    <form action="detailsHtml.php" method="GET">
+                      <input type="hidden" name="movieId" value="333339">
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
+                      <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                    </form>
                     </div>
                     <small>9 min</small>
                   </div>
@@ -76,14 +77,15 @@
                 </video>
                 <div class="card-body">
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.<br />
+                    Kung Fu Panda 4<br />
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      <form action="detailsHtml.php" method="GET">
+                        <input type="hidden" name="movieId" value="1011985">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
                     </div>
                     <small>9 min</small>
                   </div>
@@ -98,14 +100,15 @@
                 </video>
                 <div class="card-body">
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.<br />
+                    Godzilla x Kong : le nouvel Empire<br />
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      <form action="detailsHtml.php" method="GET">
+                        <input type="hidden" name="movieId" value="823464">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
                     </div>
                         <small>9 min</small>
                   </div>
@@ -117,19 +120,20 @@
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 <video width="100%" height="100%" controls>
-                    <source src="videos/Alienoid.mp4" type="video/mp4">
-                    <source src="videos/Alienoid.ogg" type="video/ogg">
+                    <source src="videos/DunePartie2.mp4" type="video/mp4">
+                    <source src="videos/DunePartie2.ogg" type="video/ogg">
                 </video>
                 <div class="card-body">
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.<br />
+                    Dune partie 2<br />
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      <form action="detailsHtml.php" method="GET">
+                        <input type="hidden" name="movieId" value="693134">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
                     </div>
                     <small>9 min</small>
                   </div>
@@ -144,16 +148,17 @@
                 </video>
                 <div class="card-body">
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.<br />
+                    Alienoid<br />
                   </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      <form action="detailsHtml.php" method="GET">
+                        <input type="hidden" name="movieId" value="601796">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
                     </div>
                     <small>9 min</small>
                   </div>
@@ -168,16 +173,17 @@
                 </video>
                 <div class="card-body">
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.<br />
+                    Le salaire de la peur<br />
                   </p>
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      <form action="detailsHtml.php" method="GET">
+                        <input type="hidden" name="movieId" value="984324">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
                     </div>
                     <small>9 min</small>
                   </div>
@@ -194,14 +200,15 @@
                 </video>
                 <div class="card-body">
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.<br />
+                    After the pandemic<br />
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      <form action="detailsHtml.php" method="GET">
+                        <input type="hidden" name="movieId" value="935271">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
                     </div>
                     <small>9 min</small>
                   </div>
@@ -216,14 +223,15 @@
                 </video>
                 <div class="card-body">
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.<br />
+                    Demon Slayer : En route vers l'entraînement des piliers<br />
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      <form action="detailsHtml.php" method="GET">
+                        <input type="hidden" name="movieId" value="1216221">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
                     </div>
                     <small>9 min</small>
                   </div>
@@ -238,14 +246,15 @@
                 </video>
                 <div class="card-body">
                   <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.<br />
+                    Fast & Furious X<br />
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      <form action="detailsHtml.php" method="GET">
+                        <input type="hidden" name="movieId" value="385687">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
                     </div>
                     <small>9 min</small>
                   </div>

@@ -1,5 +1,9 @@
 <?php
-    $apiKey = "api_key=33b4bbc1ba6dc5bb288f0601ace54e33";
+    $cookie_name = "apiKey";
+    if (!isset($_COOKIE['apiKey'])) {
+        header("Location: index.php");
+    }
+    $apiKey = "api_key=$_COOKIE[$cookie_name]";
     $apiURL = "https://api.themoviedb.org/3/discover/movie?$apiKey&with_genres=28&language=fr-FR";
     $data = file_get_contents($apiURL);
     $result = json_decode($data, true);
@@ -13,12 +17,22 @@
                 $vote_average = $movie["vote_average"];
                 $overview = $movie["overview"];
                 $id = $movie["id"];
-                echo "<img src=\"$img_URL$poster_path\"><br>";
-                echo "Titre: $title <br>";
-                echo "Description: $overview<br>";
-                echo "Note moyenne: $vote_average<br>";
-                echo "ID: $id<br>";
-                echo "<hr>";
+                echo '<div class="col-md-4">';
+                echo '<div class="card mb-4 shadow-sm">';
+                echo "<img src=\"$img_URL$poster_path\" class=\"card-img-top\">";
+                echo '<div class="card-body">';
+                echo "<h5 class=\"card-title\">$title</h5>";
+                echo "<p class=\"card-text\">Note moyenne : $vote_average</p>";
+                echo "<p class=\"card-text\">Description : $overview</p>";
+                echo '<div class="d-flex justify-content-between align-items-center">';
+                echo '<div class="btn-group">';
+                echo '<button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>';
+                echo '<button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
             } else {
                 echo "Certaines informations sont manquantes pour ce film.<br>";
             }
