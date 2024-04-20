@@ -17,14 +17,14 @@
           <a href="index.php" class="nav-item">Accueil</a>
         </div>
         <div class="search">
-            <form action="form.php" method="POST">
+            <form action="searchHtml.php" method="POST">
                 <input type="text" name="search" placeholder="Tapez pour rechercher...">
                 <input type="submit" value="Rechercher">
             </form>
         </div>
         <div class="right-items">
-          <a href="#" class="nav-item">Action</a>
-          <a href="#" class="nav-item">Drama</a>
+          <a href="actionHtml.php" class="nav-item">Action</a>
+          <a href="dramaHtml.php" class="nav-item">Drama</a>
           <a href="#" class="nav-item"><img src="cart.png" alt="panier" width="30px" height="30px"/></a>
           <a href="connexion.php"><img src="userIcon.png" alt="userIcon" width="30px" height="30px"></a>
         </div>

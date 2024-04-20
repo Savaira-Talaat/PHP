@@ -17,7 +17,7 @@
           <a href="index.php" class="nav-item">Accueil</a>
         </div>
         <div class="search">
-            <form action="form.php" method="POST">
+            <form action="searchHtml.php" method="POST">
                 <input type="text" name="search" placeholder="Tapez pour rechercher...">
                 <input type="submit" value="Rechercher">
             </form>

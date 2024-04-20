@@ -23,7 +23,7 @@
           <a href="index.php" class="nav-item">Accueil</a>
         </div>
         <div class="search">
-            <form action="form.php" method="POST">
+            <form action="searchHtml.php" method="POST">
                 <input type="text" name="search" placeholder="Tapez pour rechercher...">
                 <input type="submit" value="Rechercher">
             </form>
@@ -51,12 +51,7 @@
                     <label for="pwd" class="label"></label>
                     <input type="password" name="pwd" class="inputField" placeholder="Mot de Passe" required/>
                     <i class="bx bx-lock-alt icon"></i>
-                </div>
-                <div class="inputBox">
-                    <label for="apiKey" class="label"></label>
-                    <input type="text" name="apiKey" class="inputField" placeholder="apiKey" required/>
-                    <i class='bx bx-key icon'></i>
-                </div>          
+                </div>        
                 <div class="inputBox">
                     <input type ="submit" class="inputSubmit" value="Envoyer">
                 </div>        
