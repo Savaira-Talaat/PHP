@@ -12,7 +12,7 @@
         $img_URL = "https://image.tmdb.org/t/p/w500/";
 
         if(isset($result["results"])) {
-            foreach($result["results"] as $movie) {
+            foreach($result["results"] as $movie) {	
                 if(isset($movie["poster_path"], $movie["title"], $movie["vote_average"], $movie["overview"], $movie["id"])) {
                     $poster_path = $movie["poster_path"];
                     $title = $movie["title"];
@@ -29,12 +29,15 @@
                     echo '<div class="d-flex justify-content-between align-items-center">';
                     echo '<div class="btn-group">';
                     echo '<button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>';
-                    echo '<button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>';
+                    echo "<form action=cart.php method=POST>";
+                    echo "<input type=hidden name=movieId value=$id>";
+                    echo "<button type=submit class=btn btn-sm btn-outline-secondary id=add-to-cart-button>Ajouter au panier</button></form>";
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
+                    echo '<br>';
                 } else {
                     echo "Certaines informations sont manquantes pour ce film.<br>";
                 }
@@ -42,5 +45,10 @@
         } else {
             echo "Aucun film trouvé.";
         }
-    }
+    } 
 ?> 
+
+
+echo "<form action="cart.php" method="POST">";
+echo "<input type="hidden" name="movieId" value="333339">";
+echo "<button type="submit" class="btn btn-sm btn-outline-secondary" id="add-to-cart-button">Ajouter au panier</button></form>";

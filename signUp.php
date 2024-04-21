@@ -22,5 +22,7 @@ if (count($user) > 0) {
     $exec = $bdd->prepare($query);
     $exec->execute(["nom" => $username, "pass" => $password]);
     echo "Inscription réussie pour l'utilisateur : $username.";
-}
+}  
+sleep(2);
+header("Location: connexion.php");
 ?>

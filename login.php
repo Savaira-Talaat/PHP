@@ -13,6 +13,7 @@ $username = $_POST['username'];
 $requete = "SELECT * FROM users WHERE username = :nom";
 $exec = $bdd->prepare($requete);
 $exec ->execute(["nom" => $username]);
+echo "test";
 $user = $exec->fetch();
 
 if ($user) {

@@ -6,6 +6,7 @@
     <title>Accueil</title>
     <link rel="stylesheet" href="Css/style.css" />
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <script src=addcart.js></script>
   </head>
   <body>
     <header>
@@ -25,7 +26,7 @@
         <div class="right-items">
           <a href="actionHtml.php" class="nav-item">Action</a>
           <a href="dramaHtml.php" class="nav-item">Drama</a>
-          <a href="#" class="nav-item"><img src="cart.png" alt="panier" width="30px" height="30px"/></a>
+          <a href="carthtml" class="nav-item"><img src="cart.png" alt="panier" width="30px" height="30px"/></a>
           <a href="connexion.php"><img src="userIcon.png" alt="userIcon" width="30px" height="30px"></a>
         </div>
       </nav>
@@ -59,10 +60,14 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                     <form action="detailsHtml.php" method="GET">
-                      <input type="hidden" name="movieId" value="333339">
-                      <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
-                      <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
-                    </form>
+                        <input type="hidden" name="movieId" value="333339">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
+                      </form>
+                      <form action="addtocart.php" method="POST">
+                        <input type="hidden" name="movieId" value="333339">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary" id="add-to-cart-button">Ajouter au panier</button>
+                      </form>
+                      
                     </div>
                     <small>9 min</small>
                   </div>
@@ -84,7 +89,10 @@
                       <form action="detailsHtml.php" method="GET">
                         <input type="hidden" name="movieId" value="1011985">
                         <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
+                      <form action="addtocart.php" method="POST">
+                        <input type="hidden" name="movieId" value="1011985">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary" id="add-to-cart-button">Ajouter au panier</button>
                       </form>
                     </div>
                     <small>9 min</small>
@@ -107,7 +115,10 @@
                       <form action="detailsHtml.php" method="GET">
                         <input type="hidden" name="movieId" value="823464">
                         <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
+                      <form action="addtocart.php" method="POST">
+                        <input type="hidden" name="movieId" value="823464">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary" id="add-to-cart-button">Ajouter au panier</button>
                       </form>
                     </div>
                         <small>9 min</small>
@@ -132,7 +143,10 @@
                       <form action="detailsHtml.php" method="GET">
                         <input type="hidden" name="movieId" value="693134">
                         <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
+                      <form action="addtocart.php" method="POST">
+                        <input type="hidden" name="movieId" value="693134">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary" id="add-to-cart-button">Ajouter au panier</button>
                       </form>
                     </div>
                     <small>9 min</small>
@@ -157,7 +171,10 @@
                       <form action="detailsHtml.php" method="GET">
                         <input type="hidden" name="movieId" value="601796">
                         <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
+                      <form action="addtocart.php" method="POST">
+                        <input type="hidden" name="movieId" value="601796">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary" id="add-to-cart-button">Ajouter au panier</button>
                       </form>
                     </div>
                     <small>9 min</small>
@@ -182,7 +199,10 @@
                       <form action="detailsHtml.php" method="GET">
                         <input type="hidden" name="movieId" value="984324">
                         <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
+                      <form action="addtocart.php" method="POST">
+                        <input type="hidden" name="movieId" value="984324">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary" id="add-to-cart-button">Ajouter au panier</button>
                       </form>
                     </div>
                     <small>9 min</small>
@@ -207,7 +227,10 @@
                       <form action="detailsHtml.php" method="GET">
                         <input type="hidden" name="movieId" value="935271">
                         <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
+                      <form action="addtocart.php" method="POST">
+                        <input type="hidden" name="movieId" value="935271">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary" id="add-to-cart-button">Ajouter au panier</button>
                       </form>
                     </div>
                     <small>9 min</small>
@@ -230,7 +253,10 @@
                       <form action="detailsHtml.php" method="GET">
                         <input type="hidden" name="movieId" value="1216221">
                         <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
+                      <form action="addtocart.php" method="POST">
+                        <input type="hidden" name="movieId" value="1216221">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary" id="add-to-cart-button">Ajouter au panier</button>
                       </form>
                     </div>
                     <small>9 min</small>
@@ -253,7 +279,10 @@
                       <form action="detailsHtml.php" method="GET">
                         <input type="hidden" name="movieId" value="385687">
                         <button type="submit" class="btn btn-sm btn-outline-secondary">Détails</button>
-                        <button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>
+                      </form>
+                      <form action="addtocart.php" method="POST">
+                        <input type="hidden" name="movieId" value="385687">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary" id="add-to-cart-button">Ajouter au panier</button>
                       </form>
                     </div>
                     <small>9 min</small>
