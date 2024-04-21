@@ -34,9 +34,11 @@
     <main role="main">
         <div class="album py-5 bg-light">
             <div class="container">
+                <div class="center">
                 <div class="row">
                     <?php include('details.php'); ?>
                 </div>
+            </div>
             </div>
         </div>
     </main>
