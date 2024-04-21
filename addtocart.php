@@ -1,5 +1,5 @@
 <?php
-$movieId = $_POST['movieId'];                 
+$movieId = $_POST['movieId'];
 if (!isset($_COOKIE['apiKey'])) {
     header("Location: index.php");
     exit;
@@ -20,6 +20,15 @@ try {
 catch (Exception $e) {
     die('Erreur :'. $e->getMessage());
 }
+$query = "SELECT * FROM cart WHERE movieid = :movieid";
+$stmt = $bdd->prepare($query);
+$stmt->bindParam(':movieid', $movieId);
+$stmt->execute();
+$existingMovie = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if ($existingMovie) {
+    header("Location: index.php");
+} else {
     $query = "INSERT INTO cart (poster, titre, note, overview, movieid) VALUES (:poster, :titre, :note, :overview, :movieid)";
     $stmt = $bdd->prepare($query);
     $stmt->bindParam(':poster', $poster_url);
@@ -27,6 +36,7 @@ catch (Exception $e) {
     $stmt->bindParam(':note', $vote_average);
     $stmt->bindParam(':overview', $overview);
     $stmt->bindParam(':movieid', $movieId);
-    $stmt->execute();  
+    $stmt->execute();
     header("Location: index.php");
+}
 ?>
