@@ -15,7 +15,7 @@ $vote_average = $movie['vote_average'];
 $overview = $movie['overview'];
 $poster_url = $base_url . $poster_path;
 try {
-    $bdd = new PDO('mysql:host=localhost;dbname=my _base3;charset=utf8', "root", '');
+    $bdd = new PDO('mysql:host=localhost;dbname=my_base3;charset=utf8', "root", '');
 }
 catch (Exception $e) {
     die('Erreur :'. $e->getMessage());
