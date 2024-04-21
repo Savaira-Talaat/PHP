@@ -23,9 +23,9 @@
             </form>
         </div>
         <div class="right-items">
-          <a href="#" class="nav-item">Action</a>
-          <a href="#" class="nav-item">Drama</a>
-          <a href="#" class="nav-item"><img src="cart.png" alt="panier" width="30px" height="30px"/></a>
+          <a href="actionHtml.php" class="nav-item">Action</a>
+          <a href="dramaHtml.php" class="nav-item">Drama</a>
+          <a href="carthtml.php" class="nav-item"><img src="cart.png" alt="panier" width="30px" height="30px"/></a>
           <a href="connexion.php"><img src="userIcon.png" alt="userIcon" width="30px" height="30px"></a>
         </div>
       </nav>

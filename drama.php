@@ -26,8 +26,9 @@
                 echo "<p class=\"card-text\">Description : $overview</p>";
                 echo '<div class="d-flex justify-content-between align-items-center">';
                 echo '<div class="btn-group">';
-                echo '<button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>';
-                echo '<button type="button" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>';
+                echo "<form action=addtocart.php method=POST>";
+                echo "<input type=hidden name=movieId value=$id>";
+                echo "<button style='border: solid 1px;' type=submit class=btn btn-sm btn-outline-secondary id=add-to-cart-button>Ajouter au panier</button></form>";
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';
