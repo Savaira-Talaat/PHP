@@ -7,7 +7,6 @@ try {
 
 $username = $_POST['username'];
 $password = password_hash($_POST['pwd'], PASSWORD_BCRYPT);
-echo "$password";
 
 
 $requete = "SELECT * FROM users WHERE username = :nom";
@@ -21,6 +20,6 @@ if (count($user) > 0) {
     $query = "INSERT INTO users (username, password) VALUES (:nom, :pass)";
     $exec = $bdd->prepare($query);
     $exec->execute(["nom" => $username, "pass" => $password]);
-    echo "Inscription réussie pour l'utilisateur : $username.";
+    header("Location: connexion.php");
 }
 ?>
